@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
@@ -14,21 +13,12 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const StyledImage = styled(Img)`
-  @media (min-width: 992px) {
-    width: 10rem !important;
-    height: 10rem !important;
-    border-radius: 50% !important;
-    border: 0.5rem solid rgba(255, 255, 255, 0.2) !important;
-  }
-`
-
-const Image = () => {
+const ProfImage = () => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "profpic.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 400) {
+          fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -36,7 +26,7 @@ const Image = () => {
     }
   `)
 
-  return <StyledImage fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
 }
 
-export default Image
+export default ProfImage
