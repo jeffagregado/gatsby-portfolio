@@ -64,30 +64,7 @@ const IndexPage = props => {
           reiciendis voluptates quisquam dolorem assumenda deserunt! Delectus
           odio eligendi reprehenderit quis illum vitae aperiam natus corrupti ut
           error maxime eaque veniam doloribus numquam consectetur, repudiandae
-          repellat explicabo animi. Corporis dolores eaque nobis vero fugit
-          ipsam et assumenda voluptate veritatis minus quis perferendis itaque
-          expedita obcaecati nihil blanditiis reiciendis, illum commodi aliquam
-          odit saepe dolorum nostrum. Sunt, aperiam alias. Voluptates minus
-          sapiente, magnam provident debitis, esse, id excepturi laborum minima
-          ducimus quos expedita. Sunt dolorem quae cum animi. Vero autem quos
-          harum odit magnam quidem, provident ea quibusdam voluptatem! Incidunt
-          unde mollitia sequi, perferendis placeat nesciunt porro cumque
-          explicabo voluptate. Ex odio quaerat quo tenetur, reiciendis, qui
-          placeat architecto quibusdam unde quasi officia quae nihil harum
-          dolores, ipsa voluptates. Hic modi fugit suscipit, quo optio natus ea
-          distinctio qui dicta possimus recusandae voluptates doloribus ad at
-          quisquam impedit explicabo saepe mollitia, ullam quod sit, cupiditate
-          architecto quae! At, exercitationem. Sapiente dicta reiciendis
-          voluptates quisquam dolorem assumenda deserunt! Delectus odio eligendi
-          reprehenderit quis illum vitae aperiam natus corrupti ut error maxime
-          eaque veniam doloribus numquam consectetur, repudiandae repellat
-          explicabo animi. Corporis dolores eaque nobis vero fugit ipsam et
-          assumenda voluptate veritatis minus quis perferendis itaque expedita
-          obcaecati nihil blanditiis reiciendis, illum commodi aliquam odit
-          saepe dolorum nostrum. Sunt, aperiam alias. Voluptates minus sapiente,
-          magnam provident debitis, esse, id excepturi laborum minima ducimus
-          quos expedita. Sunt dolorem quae cum animi. Vero autem quos harum odit
-          magnam quidem, provident ea quibusdam voluptatem!
+          repellat explicabo animi. Corporis dolores eaque nobis vero fugit.
         </Typography>
       </Section>
     </Layout>
