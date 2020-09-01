@@ -16,6 +16,12 @@ const SectionExp = styled(Section)`
   &.secExp {
     padding-top: 5rem;
   }
+
+  @media (max-width: 992px) {
+    &.secExp {
+      padding-top: 0;
+    }
+  }
 `
 
 function Experience() {

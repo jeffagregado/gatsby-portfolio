@@ -47,18 +47,25 @@ const Logo = styled.div`
   display: block;
   color: white;
   font-size: 1.5rem;
-  letter-spacing: .4rem;
+  letter-spacing: 0.4rem;
   @media (min-width: 992px) {
     display: none;
   }
 `
+const ButtonMenu = styled.div`
+  display: none;
+  @media (max-width: 992px) {
+    display: block;
+  }
+`
+
 // === Fixed NavBar ==============================
 function SideBar() {
   const [scroll, setScroll] = useState(false)
 
   useEffect(() => {
     const onScrollMove = e => {
-      const navFix = window.scrollY < 100
+      const navFix = window.scrollY < 110
       navFix !== true
         ? setScroll(prevScroll => (prevScroll = true))
         : setScroll(prevScroll => (prevScroll = false))
@@ -82,7 +89,7 @@ function SideBar() {
     setAnchorEl(null)
   }
 
-  const [menuAppear, setMenuAppear] = useState(false)
+/*   const [menuAppear, setMenuAppear] = useState(false)
 
   console.log(menuAppear)
 
@@ -98,19 +105,20 @@ function SideBar() {
     return () => {
       window.removeEventListener("resize", windowSize)
     }
-  }, [])
+  }, []) */
   // === End Menu Button ==============================
 
   return (
     <SideNav position={scroll ? "fixed" : "relative"}>
-      <Logo>Jeffrey Agregado</Logo>
+      <Link to="/">
+        <Logo>Jeffrey Agregado</Logo>
+      </Link>
       <Profile id="profile">
         <Link to="/">
           <Image />
         </Link>
       </Profile>
-      {menuAppear ? (
-        <div>
+      <ButtonMenu>
           <Button
             aria-controls="simple-menu"
             aria-haspopup="true"
@@ -138,9 +146,7 @@ function SideBar() {
               <MenuItem onClick={handleClose}>Skills</MenuItem>
             </Link>
           </Menu>
-        </div>
-      ) : null}
-
+      </ButtonMenu>
       <NavList primary>
         <NavItem>
           <Link className="nav-link" to="/" activeStyle={{ color: "white" }}>

@@ -12,6 +12,6 @@ export default styled.section`
   }
 
   @media (min-width: 768px) {
-    min-height: 100vh;
+    min-height: 80vh;
   }
 `

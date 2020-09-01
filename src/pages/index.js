@@ -54,17 +54,7 @@ const IndexPage = props => {
           Quaerat dicta cupiditate totam vero voluptate ex. Officiis facere
           quaerat, quisquam veritatis, vel ipsa at provident corporis
           reprehenderit, tempora voluptatum numquam perspiciatis quia obcaecati
-          architecto! Incidunt unde mollitia sequi, perferendis placeat nesciunt
-          porro cumque explicabo voluptate. Ex odio quaerat quo tenetur,
-          reiciendis, qui placeat architecto quibusdam unde quasi officia quae
-          nihil harum dolores, ipsa voluptates. Hic modi fugit suscipit, quo
-          optio natus ea distinctio qui dicta possimus recusandae voluptates
-          doloribus ad at quisquam impedit explicabo saepe mollitia, ullam quod
-          sit, cupiditate architecto quae! At, exercitationem. Sapiente dicta
-          reiciendis voluptates quisquam dolorem assumenda deserunt! Delectus
-          odio eligendi reprehenderit quis illum vitae aperiam natus corrupti ut
-          error maxime eaque veniam doloribus numquam consectetur, repudiandae
-          repellat explicabo animi. Corporis dolores eaque nobis vero fugit.
+          architecto!
         </Typography>
       </Section>
     </Layout>
