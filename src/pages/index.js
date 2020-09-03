@@ -66,10 +66,10 @@ const IndexPage = props => {
           </SubTitle>
         </SubTitle>
         <Typography>
-          I am experienced in leveraging agile frameworks to provide a robust
-          synopsis for high level overviews. Iterative approaches to corporate
-          strategy foster collaborative thinking to further the overall value
-          proposition.
+          Currently focusing in self-study and improving my skills in order to
+          reach my dream to become a web developer. I'm a type of person who
+          searched a lot in GOOGLE either if I'm curious, wants to learn, or
+          something piqued my interest.
         </Typography>
         <div className="social-icons">
           <Link
