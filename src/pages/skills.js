@@ -88,7 +88,7 @@ function Skills() {
             </li>
             <li>
               <FontAwesomeIcon icon={faNpm} size="4x" />
-              <div>React Js</div>
+              <div>NPM</div>
             </li>
             <li>
               <Icon icon={gatsbyIcon} color="#6c757d" width="4rem" />
