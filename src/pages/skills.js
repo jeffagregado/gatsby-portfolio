@@ -12,7 +12,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 import { Icon } from "@iconify/react"
 import gatsbyIcon from "@iconify/icons-simple-icons/gatsby"
-import contentfulIcon from "@iconify/icons-logos/contentful"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Section from "../styled-components/Section"
