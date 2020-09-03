@@ -37,10 +37,6 @@ const SideNav = styled.nav`
     align-items: center;
     padding-bottom: calc(10rem);
   }
-
-  @media (max-width: 501px) {
-    justify-content: center;
-  }
 `
 
 const Profile = styled.div`
