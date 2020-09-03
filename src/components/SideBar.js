@@ -1,4 +1,4 @@
-import React, {/* useEffect, useState*/} from "react"
+import React /* useEffect, useState*/ from "react"
 import styled, { keyframes } from "styled-components"
 import Scrollspy from "react-scrollspy"
 import { pulse } from "react-animations"
@@ -37,6 +37,10 @@ const SideNav = styled.nav`
     align-items: center;
     padding-bottom: calc(10rem);
   }
+
+  @media (max-width: 501px) {
+    justify-content: center;
+  }
 `
 
 const Profile = styled.div`
@@ -57,6 +61,10 @@ const Logo = styled.div`
   @media (min-width: 992px) {
     display: none;
   }
+
+  @media (max-width: 501px) {
+    font-size: 1rem;
+  }
 `
 const ButtonMenu = styled.div`
   display: none;
@@ -67,7 +75,7 @@ const ButtonMenu = styled.div`
 
 function SideBar() {
   // === Fixed NavBar ==============================
-/*   const [scroll, setScroll] = useState(false)
+  /*   const [scroll, setScroll] = useState(false)
 
   useEffect(() => {
     const onScrollMove = e => {
@@ -127,7 +135,7 @@ function SideBar() {
   return (
     <SideNav position={"fixed"}>
       <Link to="/">
-        <Logo>Jeffrey Agregado</Logo>
+        <Logo>Agregado</Logo>
       </Link>
       <Profile>
         <Link className="animate" to="/">
