@@ -10,8 +10,8 @@ import {
   faNpm,
   faNodeJs,
 } from "@fortawesome/free-brands-svg-icons"
-import { Icon } from "@iconify/react"
-import gatsbyIcon from "@iconify/icons-simple-icons/gatsby"
+/* import { Icon, InlineIcon } from "@iconify/react"
+import gatsbyIcon from "@iconify/icons-simple-icons/gatsby" */
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Section from "../styled-components/Section"
@@ -48,6 +48,16 @@ const SectionSkills = styled(Section)`
 
     li {
       text-align: center;
+    }
+
+    @media (max-width: 415px) {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+
+      li {
+        margin-bottom: 1rem;
+      }
     }
   }
 `
@@ -88,10 +98,6 @@ function Skills() {
             <li>
               <FontAwesomeIcon icon={faNpm} size="4x" />
               <div>NPM</div>
-            </li>
-            <li>
-              <Icon icon={gatsbyIcon} color="#6c757d" width="4rem" />
-              <div>Gatsby</div>
             </li>
           </ul>
         </div>

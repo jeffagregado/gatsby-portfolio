@@ -40,6 +40,10 @@ const SectionExp = styled(Section)`
     font-size: 1.3rem;
     color: #bd5d38;
     float: right;
+
+    @media (max-width: 675px) {
+      float: none;
+    }
   }
 
   .job-desc {

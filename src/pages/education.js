@@ -27,6 +27,10 @@ const SectionEdc = styled(Section)`
     font-size: 1.3rem;
     color: #bd5d38;
     float: right;
+
+    @media (max-width: 605px) {
+      float: none;
+    }
   }
 
   .course {
