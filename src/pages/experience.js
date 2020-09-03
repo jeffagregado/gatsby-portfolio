@@ -52,7 +52,7 @@ const SectionExp = styled(Section)`
 
   @media (max-width: 992px) {
     &.secExp {
-      padding-top: 0;
+      padding-top: 3rem;
     }
   }
 `

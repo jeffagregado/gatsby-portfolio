@@ -20,7 +20,7 @@ const SideNav = styled.nav`
   align-items: center;
   justify-content: space-between;
   background-color: #bd5d38;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
   margin-bottom: 3rem;
   width: 100%;
   height: 7vh;

@@ -15,6 +15,8 @@ import styled from "styled-components"
 import Typography from "../styled-components/Typography"
 import Experience from "./experience"
 import Education from "./education"
+import Skills from "./skills"
+import { Link } from "gatsby"
 
 const TitleName = styled.h1`
   font-size: 5rem;
@@ -70,24 +72,48 @@ const IndexPage = props => {
           proposition.
         </Typography>
         <div className="social-icons">
-          <FontAwesomeIcon
-            className="social-icon"
-            icon={faLinkedin}
-            size="5x"
-          />
-          <FontAwesomeIcon className="social-icon" icon={faGithub} size="5x" />
-          <FontAwesomeIcon className="social-icon" icon={faTwitter} size="5x" />
-          <FontAwesomeIcon
-            className="social-icon"
-            icon={faFacebook}
-            size="5x"
-          />
+          <Link
+            to="https://www.linkedin.com/in/jeffrey-andrew-agregado-77311760/"
+            target="_blank"
+          >
+            <FontAwesomeIcon
+              className="social-icon"
+              icon={faLinkedin}
+              size="5x"
+            />
+          </Link>
+          <Link
+            to="https://github.com/jeffagregado/gatsby-portfolio"
+            target="_blank"
+          >
+            <FontAwesomeIcon
+              className="social-icon"
+              icon={faGithub}
+              size="5x"
+            />
+          </Link>
+          <Link to="https://twitter.com/drag00n3333" target="_blank">
+            <FontAwesomeIcon
+              className="social-icon"
+              icon={faTwitter}
+              size="5x"
+            />
+          </Link>
+          <Link to="https://www.facebook.com/drag00n3333/" target="_blank">
+            <FontAwesomeIcon
+              className="social-icon"
+              icon={faFacebook}
+              size="5x"
+            />
+          </Link>
         </div>
       </Section>
       <hr />
       <Experience />
       <hr />
       <Education />
+      <hr />
+      <Skills />
     </Layout>
   )
 }
