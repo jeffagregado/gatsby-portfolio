@@ -4,8 +4,12 @@ export default styled.ul`
   display: none;
   @media (min-width: 992px) {
     display: flex;
-    flex-direction: ${props => (props.primary ? "column" : "row")};
+    flex-direction: column;
     list-style: none;
     text-align: center;
+
+    > .is-current {
+      color: rgba(255, 255, 255, 1);
+    }
   }
 `

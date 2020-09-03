@@ -1,8 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import Layout from "../components/layout"
+//import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Section from "../styled-components/Section"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { graphql, useStaticQuery } from "gatsby"
 
 const TitleName = styled.h1`
   font-size: 2.5rem;
@@ -13,8 +15,39 @@ const TitleName = styled.h1`
 `
 
 const SectionExp = styled(Section)`
-  &.secExp {
+  .secExp {
     padding-top: 5rem;
+  }
+
+  .exp-post {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+
+  .job-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #343a40;
+  }
+
+  .job-comp {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .job-date {
+    font-size: 1.3rem;
+    color: #bd5d38;
+    float: right;
+  }
+
+  .job-desc {
+    padding: 1rem;
+  }
+
+  .job-desc ul {
+    list-style: disc;
   }
 
   @media (max-width: 992px) {
@@ -25,24 +58,49 @@ const SectionExp = styled(Section)`
 `
 
 function Experience() {
+  const data = useStaticQuery(graphql`
+    query {
+      allContentfulGatsbyPortfolio(sort: { fields: jobStart, order: DESC }) {
+        edges {
+          node {
+            jobTitle
+            company
+            jobStart(formatString: "MMM Do, YYYY")
+            jobEnd(formatString: "MMM Do, YYYY")
+            jobDesc {
+              json
+            }
+          }
+        }
+      }
+    }
+  `)
+
   return (
-    <Layout>
+    <div id="experience">
+      {/* <Layout> */}
       <SEO title="Experience" />
       <SectionExp className="secExp">
         <TitleName>Experience</TitleName>
-        <div>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab,
-            delectus consectetur minima temporibus quae consequatur ducimus quo,
-            reprehenderit quas cumque ipsum pariatur quis dolorum nisi autem
-            suscipit provident nemo numquam. Accusantium asperiores laudantium
-            quis minima, quidem veniam eligendi obcaecati odit commodi ipsa
-            accusamus adipisci temporibus odio explicabo sunt numquam fugit
-            dolorem animi eveniet velit dignissimos possimus laborum distinctio.
-          </p>
-        </div>
+        {data.allContentfulGatsbyPortfolio.edges.map(edge => {
+          return (
+            <div className="exp-post">
+              <h2 className="job-title">
+                {edge.node.jobTitle}
+                <div className="job-date">
+                  {edge.node.jobStart} - {edge.node.jobEnd}
+                </div>
+              </h2>
+              <h3 className="job-comp">{edge.node.company}</h3>
+              <div className="job-desc">
+                {documentToReactComponents(edge.node.jobDesc.json)}
+              </div>
+            </div>
+          )
+        })}
       </SectionExp>
-    </Layout>
+      {/* </Layout> */}
+    </div>
   )
 }
 

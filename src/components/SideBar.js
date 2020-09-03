@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from "react"
-import styled from "styled-components"
+import React, {/* useEffect, useState*/} from "react"
+import styled, { keyframes } from "styled-components"
+import Scrollspy from "react-scrollspy"
+import { pulse } from "react-animations"
 import { Link } from "gatsby"
 import Button from "@material-ui/core/Button"
 import Menu from "@material-ui/core/Menu"
@@ -41,6 +43,10 @@ const Profile = styled.div`
   @media (min-width: 992px) {
     display: block;
     margin: 30px 0;
+
+    &:hover {
+      animation: 1s ${keyframes`${pulse}`} infinite;
+    }
   }
 `
 const Logo = styled.div`
@@ -59,9 +65,9 @@ const ButtonMenu = styled.div`
   }
 `
 
-// === Fixed NavBar ==============================
 function SideBar() {
-  const [scroll, setScroll] = useState(false)
+  // === Fixed NavBar ==============================
+/*   const [scroll, setScroll] = useState(false)
 
   useEffect(() => {
     const onScrollMove = e => {
@@ -75,7 +81,7 @@ function SideBar() {
     return () => {
       window.removeEventListener("scroll", onScrollMove)
     }
-  }, [])
+  }, []) */
   // === End Fixed NavBar ==============================
 
   // === Menu Button ==============================
@@ -89,7 +95,7 @@ function SideBar() {
     setAnchorEl(null)
   }
 
-/*   const [menuAppear, setMenuAppear] = useState(false)
+  /*   const [menuAppear, setMenuAppear] = useState(false)
 
   console.log(menuAppear)
 
@@ -108,55 +114,73 @@ function SideBar() {
   }, []) */
   // === End Menu Button ==============================
 
+  // onScroll
+  if (typeof window !== "undefined") {
+    // eslint-disable-next-line global-require
+    require("smooth-scroll")('a[href*="#"]', {
+      speed: 1000,
+      speedAsDuration: true,
+      easing: "easeInOutCubic",
+    })
+  }
+
   return (
-    <SideNav position={scroll ? "fixed" : "relative"}>
+    <SideNav position={"fixed"}>
       <Link to="/">
         <Logo>Jeffrey Agregado</Logo>
       </Link>
-      <Profile id="profile">
-        <Link to="/">
+      <Profile>
+        <Link className="animate" to="/">
           <Image />
         </Link>
       </Profile>
       <ButtonMenu>
-          <Button
-            aria-controls="simple-menu"
-            aria-haspopup="true"
-            onClick={handleClick}
-          >
-            <MenuIcon style={{ color: "white" }} />
-          </Button>
-          <Menu
-            id="simple-menu"
-            anchorEl={anchorEl}
-            keepMounted
-            open={Boolean(anchorEl)}
-            onClose={handleClose}
-          >
-            <Link to="/">
-              <MenuItem onClick={handleClose}>About</MenuItem>
-            </Link>
-            <Link to="/experience">
-              <MenuItem onClick={handleClose}>My Experience</MenuItem>
-            </Link>
-            <Link to="/education">
-              <MenuItem onClick={handleClose}>Education</MenuItem>
-            </Link>
-            <Link to="/skills">
-              <MenuItem onClick={handleClose}>Skills</MenuItem>
-            </Link>
-          </Menu>
+        <Button
+          aria-controls="simple-menu"
+          aria-haspopup="true"
+          onClick={handleClick}
+        >
+          <MenuIcon style={{ color: "white" }} />
+        </Button>
+        <Menu
+          id="simple-menu"
+          anchorEl={anchorEl}
+          keepMounted
+          open={Boolean(anchorEl)}
+          onClose={handleClose}
+        >
+          <Link to="/#about">
+            <MenuItem onClick={handleClose}>About</MenuItem>
+          </Link>
+          <Link to="/#experience">
+            <MenuItem onClick={handleClose}>My Experience</MenuItem>
+          </Link>
+          <Link to="/#education">
+            <MenuItem onClick={handleClose}>Education</MenuItem>
+          </Link>
+          <Link to="/#skills">
+            <MenuItem onClick={handleClose}>Skills</MenuItem>
+          </Link>
+        </Menu>
       </ButtonMenu>
-      <NavList primary>
+      <Scrollspy
+        componentTag={NavList}
+        items={["about", "experience", "education", "skills"]}
+        currentClassName="is-current"
+      >
         <NavItem>
-          <Link className="nav-link" to="/" activeStyle={{ color: "white" }}>
+          <Link
+            className="nav-link"
+            to="/#about"
+            activeStyle={{ color: "white" }}
+          >
             About
           </Link>
         </NavItem>
         <NavItem>
           <Link
             className="nav-link"
-            to="/experience"
+            to="/#experience"
             activeStyle={{ color: "white" }}
           >
             Experience
@@ -165,7 +189,7 @@ function SideBar() {
         <NavItem>
           <Link
             className="nav-link"
-            to="/education"
+            to="/#education"
             activeStyle={{ color: "white" }}
           >
             Education
@@ -174,13 +198,13 @@ function SideBar() {
         <NavItem>
           <Link
             className="nav-link"
-            to="/skills"
+            to="/#skills"
             activeStyle={{ color: "white" }}
           >
             Skills
           </Link>
         </NavItem>
-      </NavList>
+      </Scrollspy>
     </SideNav>
   )
 }

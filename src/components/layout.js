@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 
 // import Header from "./header"
 import SideBar from "./SideBar"
-import "../global.scss"
+//import "../global.scss"
 import Container from "../styled-components/Container"
 
 const Layout = ({ children }) => {

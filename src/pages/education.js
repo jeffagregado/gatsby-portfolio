@@ -1,13 +1,28 @@
 import React from "react"
-import Layout from "../components/layout"
+//import Layout from "../components/layout"
 import SEO from "../components/seo"
+import styled from "styled-components"
+import Section from "../styled-components/Section"
 
-function education() {
+const TitleName = styled.h1`
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #343a40;
+  line-height: 1.5;
+  text-transform: ${props => (props.primary ? "lowercase" : "uppercase")};
+`
+
+function Education() {
   return (
-    <Layout>
+    <div id="education">
+      {/* <Layout> */}
       <SEO title={"Education"} />
-    </Layout>
+      <Section>
+        <TitleName>Education</TitleName>
+      </Section>
+      {/* </Layout> */}
+    </div>
   )
 }
 
-export default education
+export default Education
