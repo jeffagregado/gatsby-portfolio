@@ -9,7 +9,7 @@ import { graphql, useStaticQuery } from "gatsby"
 const TitleName = styled.h1`
   font-size: 2.5rem;
   font-weight: 700;
-  color: #343a40;
+  color: #232946;
   line-height: 1.5;
   text-transform: ${props => (props.primary ? "lowercase" : "uppercase")};
 `
@@ -28,12 +28,13 @@ const SectionExp = styled(Section)`
   .job-title {
     font-size: 2rem;
     font-weight: 700;
-    color: #343a40;
+    color: #232946;
   }
 
   .job-comp {
     font-size: 1.5rem;
     font-weight: 500;
+    color: #232946;
   }
 
   .job-date {
@@ -48,6 +49,7 @@ const SectionExp = styled(Section)`
 
   .job-desc {
     padding: 1rem;
+    font-size: 1.2rem;
   }
 
   .job-desc ul {

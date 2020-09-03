@@ -9,5 +9,5 @@ export default styled.p`
   font-weight: 300;
   orphans: 3;
   widows: 3;
-  color: #6c757d;
+  color: #232946;
 `

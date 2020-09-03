@@ -21,7 +21,7 @@ import { Link } from "gatsby"
 const TitleName = styled.h1`
   font-size: 5rem;
   font-weight: 700;
-  color: #343a40;
+  color: #232946;
   line-height: 1;
   text-transform: uppercase;
 `
@@ -32,7 +32,7 @@ const SubTitle = styled.span`
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1.5rem;
   font-weight: 500;
-  color: #6c757d;
+  color: #232946;
   text-transform: ${props => (props.primary ? "lowercase" : "uppercase")};
 `
 

@@ -19,7 +19,7 @@ import Section from "../styled-components/Section"
 const TitleName = styled.h1`
   font-size: 2.5rem;
   font-weight: 700;
-  color: #343a40;
+  color: #232946;
   line-height: 1.5;
   text-transform: ${props => (props.primary ? "lowercase" : "uppercase")};
 `

@@ -19,7 +19,7 @@ const SideNav = styled.nav`
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  background-color: #bd5d38;
+  background-color: #232946;
   padding: 0.5rem 2rem;
   margin-bottom: 3rem;
   width: 100%;
