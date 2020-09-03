@@ -70,6 +70,7 @@ const SectionExp = styled(Section)`
 `
 
 function Experience() {
+  // Fetching data from API Contentful
   const data = useStaticQuery(graphql`
     query {
       allContentfulGatsbyPortfolio(sort: { fields: jobStart, order: DESC }) {
