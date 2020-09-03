@@ -59,6 +59,12 @@ const SectionExp = styled(Section)`
       padding-top: 3rem;
     }
   }
+
+  footer {
+    font-size: 0.7rem;
+    margin-top: 2rem;
+    float: right;
+  }
 `
 
 function Experience() {
@@ -86,22 +92,28 @@ function Experience() {
       <SEO title="Experience" />
       <SectionExp className="secExp">
         <TitleName>Experience</TitleName>
-        {data.allContentfulGatsbyPortfolio.edges.map(edge => {
-          return (
-            <div className="exp-post">
-              <h2 className="job-title">
-                {edge.node.jobTitle}
-                <div className="job-date">
-                  {edge.node.jobStart} - {edge.node.jobEnd}
+        <div>
+          {data.allContentfulGatsbyPortfolio.edges.map(edge => {
+            return (
+              <div className="exp-post">
+                <h2 className="job-title">
+                  {edge.node.jobTitle}
+                  <div className="job-date">
+                    {edge.node.jobStart} - {edge.node.jobEnd}
+                  </div>
+                </h2>
+                <h3 className="job-comp">{edge.node.company}</h3>
+                <div className="job-desc">
+                  {documentToReactComponents(edge.node.jobDesc.json)}
                 </div>
-              </h2>
-              <h3 className="job-comp">{edge.node.company}</h3>
-              <div className="job-desc">
-                {documentToReactComponents(edge.node.jobDesc.json)}
               </div>
-            </div>
-          )
-        })}
+            )
+          })}
+        </div>
+
+        <footer>
+          Powered by: <strong>CONTENTFUL</strong>
+        </footer>
       </SectionExp>
       {/* </Layout> */}
     </div>

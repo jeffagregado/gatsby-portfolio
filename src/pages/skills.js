@@ -8,7 +8,7 @@ import {
   faReact,
   faSass,
   faNpm,
-  faNodeJs,
+  //faNodeJs,
 } from "@fortawesome/free-brands-svg-icons"
 /* import { Icon, InlineIcon } from "@iconify/react"
 import gatsbyIcon from "@iconify/icons-simple-icons/gatsby" */
@@ -86,10 +86,6 @@ function Skills() {
             <li>
               <FontAwesomeIcon icon={faJsSquare} size="4x" />
               <div>Javascript</div>
-            </li>
-            <li>
-              <FontAwesomeIcon icon={faNodeJs} size="4x" />
-              <div>Node Js</div>
             </li>
             <li>
               <FontAwesomeIcon icon={faReact} size="4x" />
