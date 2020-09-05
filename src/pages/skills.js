@@ -14,7 +14,7 @@ import {
 import gatsbyIcon from "@iconify/icons-simple-icons/gatsby" */
 import SEO from "../components/seo"
 import Section from "../styled-components/Section"
-import { Zoom } from "react-reveal"
+import { Fade } from "react-reveal"
 
 const TitleName = styled.h1`
   font-size: 2.5rem;
@@ -67,7 +67,7 @@ function Skills() {
     <>
       <SEO title={"Skills"} />
       <SectionSkills id="skills">
-        <Zoom left cascade>
+        <Fade left cascade>
           <TitleName>Skills</TitleName>
           <div className="tools">
             <h3 className="sub-skills">PROGRAMMING LANGUAGES & TOOLS</h3>
@@ -98,7 +98,7 @@ function Skills() {
               </li>
             </ul>
           </div>
-        </Zoom>
+        </Fade>
       </SectionSkills>
     </>
   )

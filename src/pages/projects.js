@@ -11,7 +11,7 @@ import Typhography from "../styled-components/Typography"
 import TodoImg from "../images/todolist.png"
 import BeachImg from "../images/beach-resort.png"
 import { Link } from "gatsby"
-import { Zoom } from "react-reveal"
+import { Fade } from "react-reveal"
 
 const TitleName = styled.h1`
   font-size: 2.5rem;
@@ -51,7 +51,7 @@ function Projects() {
     <>
       <SEO title={"Projects"} />
       <SectionProj id="projects">
-        <Zoom left cascade>
+        <Fade left cascade>
           <TitleName>Projects</TitleName>
           <ProjCard>
             <Link
@@ -106,7 +106,7 @@ function Projects() {
               </Card>
             </Link>
           </ProjCard>
-        </Zoom>
+        </Fade>
       </SectionProj>
     </>
   )
