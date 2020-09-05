@@ -70,7 +70,7 @@ function Projects() {
                 <CardContent>
                   <TyphoProj style={{ color: "white" }}>Todo List</TyphoProj>
                   <TyphoProj style={{ color: "white" }}>
-                    Used: React Js | Firebase
+                    Used: Gatsby Js | Firebase
                   </TyphoProj>
                 </CardContent>
               </CardActionArea>
