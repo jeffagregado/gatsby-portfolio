@@ -89,10 +89,7 @@ const IndexPage = props => {
               size="5x"
             />
           </Link>
-          <Link
-            to="https://github.com/jeffagregado/gatsby-portfolio"
-            target="_blank"
-          >
+          <Link to="https://github.com/jeffagregado" target="_blank">
             <FontAwesomeIcon
               className="social-icon"
               icon={faGithub}
