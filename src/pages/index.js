@@ -11,13 +11,16 @@ import {
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Section from "../styled-components/Section"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import Typography from "../styled-components/Typography"
 import Experience from "./experience"
 import Education from "./education"
 import Skills from "./skills"
 import { Link } from "gatsby"
 import Projects from "./projects"
+import { fadeIn } from "react-animations"
+
+const FadeInAnimation = keyframes`${fadeIn}`
 
 const TitleName = styled.h1`
   font-size: 5rem;
@@ -25,6 +28,11 @@ const TitleName = styled.h1`
   color: #232946;
   line-height: 1;
   text-transform: uppercase;
+`
+const SectionAbout = styled(Section)`
+  &#about {
+    animation: 2s ${FadeInAnimation};
+  }
 `
 
 const SubTitle = styled.span`
@@ -55,7 +63,7 @@ const IndexPage = props => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Section id="about">
+      <SectionAbout id="about">
         <TitleName>{data.site.siteMetadata.author}</TitleName>
         <SubTitle>
           {data.site.siteMetadata.address} |{" "}
@@ -106,7 +114,7 @@ const IndexPage = props => {
             />
           </Link>
         </div>
-      </Section>
+      </SectionAbout>
       <hr />
       <Experience />
       <hr />

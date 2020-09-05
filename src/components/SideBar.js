@@ -11,6 +11,9 @@ import MenuIcon from "@material-ui/icons/Menu"
 import NavList from "../styled-components/NavList"
 import NavItem from "../styled-components/NavItem"
 import Image from "./image"
+import slideInDown from "react-animations/lib/slide-in-down"
+
+const SlideInDownAnimation = keyframes`${slideInDown}`
 
 // Styled Component
 const SideNav = styled.nav`
@@ -24,6 +27,7 @@ const SideNav = styled.nav`
   margin-bottom: 3rem;
   width: 100%;
   height: 7vh;
+  animation: 0.5s ${SlideInDownAnimation};
 
   @media (min-width: 992px) {
     position: fixed;
@@ -176,7 +180,11 @@ function SideBar() {
         currentClassName="is-current"
       >
         <NavItem>
-          <Link className="nav-link" to="/#about" activeStyle={{ color: "white" }}>
+          <Link
+            className="nav-link"
+            to="/#about"
+            activeStyle={{ color: "white" }}
+          >
             About
           </Link>
         </NavItem>
