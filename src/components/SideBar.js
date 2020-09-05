@@ -165,19 +165,18 @@ function SideBar() {
           <Link to="/#skills">
             <MenuItem onClick={handleClose}>Skills</MenuItem>
           </Link>
+          <Link to="/#projects">
+            <MenuItem onClick={handleClose}>Projects</MenuItem>
+          </Link>
         </Menu>
       </ButtonMenu>
       <Scrollspy
         componentTag={NavList}
-        items={["about", "experience", "education", "skills"]}
+        items={["about", "experience", "education", "skills", "projects"]}
         currentClassName="is-current"
       >
         <NavItem>
-          <Link
-            className="nav-link"
-            to="/#about"
-            activeStyle={{ color: "white" }}
-          >
+          <Link className="nav-link" to="/#about" activeStyle={{ color: "white" }}>
             About
           </Link>
         </NavItem>
@@ -206,6 +205,15 @@ function SideBar() {
             activeStyle={{ color: "white" }}
           >
             Skills
+          </Link>
+        </NavItem>
+        <NavItem>
+          <Link
+            className="nav-link"
+            to="/#projects"
+            activeStyle={{ color: "white" }}
+          >
+            Projects
           </Link>
         </NavItem>
       </Scrollspy>

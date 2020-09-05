@@ -12,7 +12,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 /* import { Icon, InlineIcon } from "@iconify/react"
 import gatsbyIcon from "@iconify/icons-simple-icons/gatsby" */
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Section from "../styled-components/Section"
 
@@ -64,7 +63,7 @@ const SectionSkills = styled(Section)`
 
 function Skills() {
   return (
-    <Layout>
+    <>
       <SEO title={"Skills"} />
       <SectionSkills id="skills">
         <TitleName>Skills</TitleName>
@@ -98,7 +97,7 @@ function Skills() {
           </ul>
         </div>
       </SectionSkills>
-    </Layout>
+    </>
   )
 }
 

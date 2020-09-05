@@ -17,6 +17,7 @@ import Experience from "./experience"
 import Education from "./education"
 import Skills from "./skills"
 import { Link } from "gatsby"
+import Projects from "./projects"
 
 const TitleName = styled.h1`
   font-size: 5rem;
@@ -67,9 +68,7 @@ const IndexPage = props => {
         </SubTitle>
         <Typography>
           Currently focusing in self-study and improving my skills in order to
-          reach my dream to become a web developer. I'm a type of person who
-          searched a lot in GOOGLE either if I'm curious, wants to learn, or
-          something piqued my interest.
+          become a web developer.
         </Typography>
         <div className="social-icons">
           <Link
@@ -114,6 +113,8 @@ const IndexPage = props => {
       <Education />
       <hr />
       <Skills />
+      <hr />
+      <Projects />
     </Layout>
   )
 }
