@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import Section from "../styled-components/Section"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { graphql, useStaticQuery } from "gatsby"
+import Zoom from "react-reveal"
 
 const TitleName = styled.h1`
   font-size: 2.5rem;
@@ -94,29 +95,31 @@ function Experience() {
       {/* <Layout> */}
       <SEO title="Experience" />
       <SectionExp className="secExp">
-        <TitleName>Experience</TitleName>
-        <div>
-          {data.allContentfulGatsbyPortfolio.edges.map(edge => {
-            return (
-              <div className="exp-post">
-                <h2 className="job-title">
-                  {edge.node.jobTitle}
-                  <div className="job-date">
-                    {edge.node.jobStart} - {edge.node.jobEnd}
+        <Zoom left cascade>
+          <TitleName>Experience</TitleName>
+          <div>
+            {data.allContentfulGatsbyPortfolio.edges.map(edge => {
+              return (
+                <div className="exp-post">
+                  <h2 className="job-title">
+                    {edge.node.jobTitle}
+                    <div className="job-date">
+                      {edge.node.jobStart} - {edge.node.jobEnd}
+                    </div>
+                  </h2>
+                  <h3 className="job-comp">{edge.node.company}</h3>
+                  <div className="job-desc">
+                    {documentToReactComponents(edge.node.jobDesc.json)}
                   </div>
-                </h2>
-                <h3 className="job-comp">{edge.node.company}</h3>
-                <div className="job-desc">
-                  {documentToReactComponents(edge.node.jobDesc.json)}
                 </div>
-              </div>
-            )
-          })}
-        </div>
+              )
+            })}
+          </div>
 
-        <footer>
-          Powered by: <strong>CONTENTFUL</strong>
-        </footer>
+          <footer>
+            Powered by: <strong>CONTENTFUL</strong>
+          </footer>
+        </Zoom>
       </SectionExp>
       {/* </Layout> */}
     </div>

@@ -14,6 +14,7 @@ import {
 import gatsbyIcon from "@iconify/icons-simple-icons/gatsby" */
 import SEO from "../components/seo"
 import Section from "../styled-components/Section"
+import { Zoom } from "react-reveal"
 
 const TitleName = styled.h1`
   font-size: 2.5rem;
@@ -66,36 +67,38 @@ function Skills() {
     <>
       <SEO title={"Skills"} />
       <SectionSkills id="skills">
-        <TitleName>Skills</TitleName>
-        <div className="tools">
-          <h3 className="sub-skills">PROGRAMMING LANGUAGES & TOOLS</h3>
-          <ul className="dev-icons">
-            <li>
-              <FontAwesomeIcon icon={faHtml5} size="4x" />
-              <div>HTML5</div>
-            </li>
-            <li>
-              <FontAwesomeIcon icon={faCss3Alt} size="4x" />
-              <div>CSS3</div>
-            </li>
-            <li>
-              <FontAwesomeIcon icon={faSass} size="4x" />
-              <div>SASS/SCSS</div>
-            </li>
-            <li>
-              <FontAwesomeIcon icon={faJsSquare} size="4x" />
-              <div>Javascript</div>
-            </li>
-            <li>
-              <FontAwesomeIcon icon={faReact} size="4x" />
-              <div>React Js</div>
-            </li>
-            <li>
-              <FontAwesomeIcon icon={faNpm} size="4x" />
-              <div>NPM</div>
-            </li>
-          </ul>
-        </div>
+        <Zoom left cascade>
+          <TitleName>Skills</TitleName>
+          <div className="tools">
+            <h3 className="sub-skills">PROGRAMMING LANGUAGES & TOOLS</h3>
+            <ul className="dev-icons">
+              <li>
+                <FontAwesomeIcon icon={faHtml5} size="4x" />
+                <div>HTML5</div>
+              </li>
+              <li>
+                <FontAwesomeIcon icon={faCss3Alt} size="4x" />
+                <div>CSS3</div>
+              </li>
+              <li>
+                <FontAwesomeIcon icon={faSass} size="4x" />
+                <div>SASS/SCSS</div>
+              </li>
+              <li>
+                <FontAwesomeIcon icon={faJsSquare} size="4x" />
+                <div>Javascript</div>
+              </li>
+              <li>
+                <FontAwesomeIcon icon={faReact} size="4x" />
+                <div>React Js</div>
+              </li>
+              <li>
+                <FontAwesomeIcon icon={faNpm} size="4x" />
+                <div>NPM</div>
+              </li>
+            </ul>
+          </div>
+        </Zoom>
       </SectionSkills>
     </>
   )

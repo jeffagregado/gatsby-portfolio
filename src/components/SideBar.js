@@ -28,6 +28,7 @@ const SideNav = styled.nav`
   width: 100%;
   height: 7vh;
   animation: 0.5s ${SlideInDownAnimation};
+  z-index: 1000;
 
   @media (min-width: 992px) {
     position: fixed;
