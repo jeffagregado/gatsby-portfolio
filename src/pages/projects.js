@@ -9,6 +9,7 @@ import CardContent from "@material-ui/core/CardContent"
 import CardMedia from "@material-ui/core/CardMedia"
 import Typhography from "../styled-components/Typography"
 import TodoImg from "../images/todolist.png"
+import BeachImg from "../images/beach-resort.png"
 import { Link } from "gatsby"
 
 const TitleName = styled.h1`
@@ -41,21 +42,51 @@ function Projects() {
       <SEO title={"Projects"} />
       <SectionProj id="projects">
         <TitleName>Projects</TitleName>
-        <div style={{ margin: "1rem 0" }}>
-          <Link to="https://todo-app-cp-374bb.web.app/" target="_blank">
+        <div style={{ margin: "1rem 0", display: "flex" }}>
+          <Link
+            to="https://todo-app-cp-374bb.web.app/"
+            target="_blank"
+            style={{ margin: "1rem" }}
+          >
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia
                   component="img"
                   alt="Todo List"
-                  height="130"
+                  height="100"
                   image={TodoImg}
                   title="Todo List"
+                  style={{ height: "200px" }}
                 />
                 <CardContent>
                   <TyphoProj style={{ color: "white" }}>Todo List</TyphoProj>
                   <TyphoProj style={{ color: "white" }}>
                     Used: React Js | Firebase
+                  </TyphoProj>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Link>
+
+          <Link
+            to="https://react-beach-resort-jeffproject.netlify.app/"
+            target="_blank"
+            style={{ margin: "1rem" }}
+          >
+            <Card className={classes.root}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  alt="Beach Resort"
+                  height="100"
+                  image={BeachImg}
+                  title="Todo List"
+                  style={{ height: "200px" }}
+                />
+                <CardContent>
+                  <TyphoProj style={{ color: "white" }}>Beach Resort</TyphoProj>
+                  <TyphoProj style={{ color: "white" }}>
+                    Used: React Js | Contentful
                   </TyphoProj>
                 </CardContent>
               </CardActionArea>
