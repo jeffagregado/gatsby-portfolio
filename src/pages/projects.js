@@ -34,6 +34,15 @@ const TyphoProj = styled(Typhography)`
   margin: 0;
 `
 
+const ProjCard = styled.div`
+  margin: 1rem;
+  display: flex;
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+  }
+`
+
 function Projects() {
   const classes = useStyles()
 
@@ -42,7 +51,7 @@ function Projects() {
       <SEO title={"Projects"} />
       <SectionProj id="projects">
         <TitleName>Projects</TitleName>
-        <div style={{ margin: "1rem 0", display: "flex" }}>
+        <ProjCard>
           <Link
             to="https://todo-app-cp-374bb.web.app/"
             target="_blank"
@@ -92,7 +101,7 @@ function Projects() {
               </CardActionArea>
             </Card>
           </Link>
-        </div>
+        </ProjCard>
       </SectionProj>
     </>
   )
