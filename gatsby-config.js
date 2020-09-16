@@ -4,7 +4,7 @@ module.exports = {
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `Jeffrey Andrew E. Agregado`,
     address: `B6 L7 Rolex St., Interville 3 Subd., Novaliches, Q.C.`,
-    contact: `(+63) 908-8840124`,
+    contact: `(+63) 921-3258562`,
     email: `jeff.agregado@outlook.com`,
   },
   plugins: [
