@@ -10,6 +10,7 @@ import CardMedia from "@material-ui/core/CardMedia"
 import Typhography from "../styled-components/Typography"
 import TodoImg from "../images/todolist.png"
 import BeachImg from "../images/beach-resort.png"
+import HoloImg from "../images/hololive-chart.png"
 import { Link } from "gatsby"
 import { Fade } from "react-reveal"
 
@@ -100,6 +101,33 @@ function Projects() {
                     </TyphoProj>
                     <TyphoProj style={{ color: "white" }}>
                       Used: React Js | Contentful
+                    </TyphoProj>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Link>
+
+            <Link
+              to="https://hololive-chart.netlify.app/"
+              target="_blank"
+              style={{ margin: "1rem" }}
+            >
+              <Card className={classes.root}>
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    alt="Hololive Sub Chart"
+                    height="100"
+                    image={HoloImg}
+                    title="Todo List"
+                    style={{ height: "200px" }}
+                  />
+                  <CardContent>
+                    <TyphoProj style={{ color: "white" }}>
+                      Hololive Sub Chart
+                    </TyphoProj>
+                    <TyphoProj style={{ color: "white" }}>
+                      Used: Gatsby Js
                     </TyphoProj>
                   </CardContent>
                 </CardActionArea>
