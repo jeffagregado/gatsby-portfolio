@@ -115,10 +115,6 @@ function Experience() {
               )
             })}
           </div>
-
-          <footer>
-            Powered by: <strong>CONTENTFUL</strong>
-          </footer>
         </Zoom>
       </SectionExp>
       {/* </Layout> */}
