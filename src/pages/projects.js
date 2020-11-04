@@ -11,6 +11,7 @@ import Typhography from "../styled-components/Typography"
 import TodoImg from "../images/todolist.png"
 import BeachImg from "../images/beach-resort.png"
 import HoloImg from "../images/hololive-chart.png"
+import Foodko from "../images/foodko.png"
 import { Link } from "gatsby"
 import { Fade } from "react-reveal"
 
@@ -126,6 +127,31 @@ function Projects() {
                     <TyphoProj style={{ color: "white" }}>
                       Hololive Sub Chart
                     </TyphoProj>
+                    <TyphoProj style={{ color: "white" }}>
+                      Used: Gatsby Js
+                    </TyphoProj>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Link>
+
+            <Link
+              to="https://foodko.netlify.app/"
+              target="_blank"
+              style={{ margin: "1rem" }}
+            >
+              <Card className={classes.root}>
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    alt="Foodko"
+                    height="100"
+                    image={Foodko}
+                    title="Foodko"
+                    style={{ height: "200px" }}
+                  />
+                  <CardContent>
+                    <TyphoProj style={{ color: "white" }}>Foodko</TyphoProj>
                     <TyphoProj style={{ color: "white" }}>
                       Used: Gatsby Js
                     </TyphoProj>
