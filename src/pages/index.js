@@ -75,8 +75,9 @@ const IndexPage = props => {
           </SubTitle>
         </SubTitle>
         <Typography>
-          Currently focusing in self-study and improving my skills in order to
-          become a web developer.
+          Currently shifting my career to Web Developer. Self taught and highly
+          motivated. My current goal is to land a Front-End Dev position do
+          develop my skills in Web Development.
         </Typography>
         <div className="social-icons">
           <Link
